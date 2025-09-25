@@ -1,0 +1,127 @@
+:root{
+  --bg: #f4f7fb;
+  --card: #fff;
+  --accent: #4a90e2;
+  --muted: #7b8a97;
+  --user: #daf1ff;
+  --bot: #f1f4f8;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.app{
+  width:720px;
+  max-width:96%;
+  background:var(--card);
+  border-radius:16px;
+  box-shadow: 0 8px 30px rgba(20,30,50,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  height:80vh;
+}
+
+.header{
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eef2f6;
+}
+
+.header h1{margin:0; font-size:18px}
+.header button{
+  background:transparent;
+  border:1px solid #e1e7ee;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.chat{
+  padding:20px;
+  overflow-y:auto;
+  flex:1;
+  background:linear-gradient(180deg, #fbfdff, #f7fbff);
+}
+
+.msg{
+  display:flex;
+  margin:8px 0;
+  gap:10px;
+}
+
+.msg .bubble{
+  max-width:78%;
+  padding:12px 14px;
+  border-radius:12px;
+  line-height:1.45;
+  font-size:14px;
+  white-space:pre-wrap;
+}
+
+.user { justify-content:flex-end; }
+.user .bubble {
+  background:var(--user);
+  border-radius:12px 12px 8px 12px;
+  text-align:right;
+}
+
+.bot .bubble {
+  background:var(--bot);
+  border-radius:12px 12px 12px 8px;
+  text-align:left;
+}
+
+.meta {
+  font-size:11px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.input-area{
+  display:flex;
+  gap:8px;
+  padding:12px;
+  border-top:1px solid #eef2f6;
+  align-items:center;
+}
+
+textarea#user_input{
+  flex:1;
+  resize:none;
+  min-height:46px;
+  max-height:160px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #e6eef6;
+  font-size:14px;
+  outline:none;
+}
+
+#sendBtn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.footer{
+  padding:8px 16px;
+  font-size:12px;
+  color:var(--muted);
+  border-top:1px solid #eef2f6;
+}

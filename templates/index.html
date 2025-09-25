@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Groq Chat — Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Groq Chat</h1>
+      <button id="clearBtn" title="Clear conversation">Clear</button>
+    </header>
+
+    <main id="chat" class="chat"></main>
+
+    <form id="inputForm" class="input-area" onsubmit="return false;">
+      <textarea id="user_input" placeholder="Type a message — press Enter to send, Shift+Enter for newline"></textarea>
+      <button id="sendBtn">Send</button>
+    </form>
+
+    <footer class="footer">Model: <span id="modelName"></span></footer>
+  </div>
+
+  <script>
+    // expose model name (optional)
+    document.getElementById("modelName").innerText = "{{ request.app.extra.get('model', '') or '' }}";
+  </script>
+  <script src="/static/script.js"></script>
+</body>
+</html>
