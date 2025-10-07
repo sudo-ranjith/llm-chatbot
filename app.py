@@ -142,7 +142,7 @@ def retrieve(qdrant: QdrantClient, embedder: MiniLMEmbeddings, collection: str, 
 # -----------------------------
 # UI
 # -----------------------------
-st.title("🔎 Best-in-class RAG Assistant — Qdrant + bge-m3 + Groq")
+st.title("🔎 RAG Assistant  \n+ Qdrant (vectorDB) \n+ HuggingFace Embedding (sentence-transformers/all-MiniLM-L6-v2) \n+ Groq (gemma2-9b-it) \n+ HuggingFace Inference (mistralai/Mixtral-8x7B-Instruct-v0.1) ")
 
 with st.sidebar:
     st.header("⚙️ Configuration")
