@@ -68,7 +68,7 @@ def get_embedder():
 @st.cache_resource
 def get_llm():
     if GROQ_API_KEY:
-        return ChatGroq(api_key=GROQ_API_KEY, model_name="gemma2-9b-it", temperature=0.2, max_tokens=8000)
+        return ChatGroq(api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile", temperature=0.2, max_tokens=8000)
     else:
         # Fallback to HF Inference text generation (CPU free tier)
         return InferenceClient(model="mistralai/Mixtral-8x7B-Instruct-v0.1", token=HF_TOKEN, timeout=60)
